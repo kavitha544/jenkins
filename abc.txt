@@ -1,9 +1,11 @@
-pipeline
-agent any{
- stages{
-stage("build")
-steps{
-echo"hello world"
-}
-}
+pipeline {
+    agent any  // This defines where the pipeline runs, 'any' means on any available agent
+
+    stages {
+        stage('Build') {  // Define a stage named "Build"
+            steps {
+                echo 'Hello, World!'  // This will print "Hello, World!" in the Jenkins console
+            }
+        }
+    }
 }
